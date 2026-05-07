@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('/fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('/fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: #1B1C21;
+    text-decoration: none;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.title-right {
+    display: none;
+}
+.table {
+    display: none;
+}
+body {
+
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 400;
+    background-color: #F8F8F8;
+}
+
+.container {
+    width: 100%;
+    margin-top: 24px ;
+    gap: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+
+header {
+ width: 100%;
+ background-color: #fff ;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    height: 88px;
+    gap: 16px;
+    box-shadow: 0 1px 0 0 #D9FFF5;
+
+}
+.header__container-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__container-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+    padding-right: 24px;
+}
+.service__title {
+    gap: 20px;
+    padding: 0px;
+    display: flex;
+    align-items: center;   
+}
+.service__title-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.slide-menu__wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-menu__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 24px;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    rgba(248, 248, 248, 0),
+    #F8F8F8
+  );
+pointer-events: none;
+}
+.slide-menu {
+    overflow-x: auto;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.slide-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 22px;
+    gap: 0px;
+    color: #7E7E82;
+    background: none;
+    border: 0;
+}
+
+.btn.active{
+    border: 2px solid #B8FFEC ;
+    border-radius: 5px
+}
+
+.scroll-text {
+overflow-y: auto;
+max-width: 290 px;
+max-height: 105px;
+font-size: 14px;
+margin-top: 16px;
+margin-bottom: 16px;
+-ms-overflow-style: none;
+scrollbar-width: none; 
+}
+.scroll-text::-webkit-scrollbar {
+  display: none;
+}
+.scroll-text p{
+    color: #1B1C21;
+}
+.read-more {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+
+/* ПЛАНШЕТ */
+
+@media (min-width: 768px) {
+
+.mobile {
+    display: none;
+}
+.first-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+.scroll-text {
+    max-height: 180px;
+}
+.table {
+    display: flex;
+}
+.first-block-left {
+    width: 312px;
+    max-width: 312px;
+    flex-shrink: 0;
+}
+.picture-cps-right {
+    flex: 1;
+    min-width: 0;
+}
+.picture-cps-right img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+}
+
+/* компутер */
+@media (min-width: 1120px) {
+.header {
+        display: none;
+    }
+.service__title {
+    gap: 20px;
+    padding: 0px;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+}
+.service__title-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.service__title-right {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 16px;
+}
+.title-right a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ .first-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .first_block-left {
+    width: 500px;
+    max-width: 500px;
+    flex-shrink: 0;
+  }
+
+  .picture-cps-right {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .picture-cps-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+.slide-menu {
+    overflow-x: hidden;
+}
+}
